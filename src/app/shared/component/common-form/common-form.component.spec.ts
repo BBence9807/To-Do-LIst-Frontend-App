@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthButtonComponent } from './auth-button.component';
+import { CommonFormComponent } from './common-form.component';
 
-describe('AuthButtonComponent', () => {
-  let component: AuthButtonComponent;
-  let fixture: ComponentFixture<AuthButtonComponent>;
+describe('AuthFormComponent', () => {
+  let component: CommonFormComponent;
+  let fixture: ComponentFixture<CommonFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AuthButtonComponent]
+      declarations: [CommonFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AuthButtonComponent);
+    fixture = TestBed.createComponent(CommonFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

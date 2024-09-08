@@ -3,13 +3,16 @@
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="sign-in-box">
                 <div class="sign-in-title">
-                    <p>{{title}}</p>
+                    <app-auth-title [title]="title"></app-auth-title>
+                </div>
+                <div>
+                    <app-common-form [buttonTitle]="title" [fields]="formFields" (submit)="submit($event)"></app-common-form>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="sign-in-box">
-                <img [src]="scr" alt="alt"/>
+            <div>
+                <app-common-image></app-common-image>
             </div>
         </div>
     </div>

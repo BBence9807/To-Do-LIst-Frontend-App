@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div *ngFor="let f of fields">
+        <div *ngIf="f.type == 'text'">
+            <input pInputText [id]="f.name" [placeholder]="f.placeholder" [formControlName]="f.name"/>
+        </div>
+        <div *ngIf="f.type == 'password'">
+            <p-password [id]="f.name" [placeholder]="f.placeholder" [formControlName]="f.name" [feedback]="false" [toggleMask]="true" />
+        </div>
+    </div>
+    <div>
+        <app-common-button [label]="buttonTitle" [type]="buttonType" [disabled]="formIsInValid()" [color]="buttonColor"></app-common-button>
+    </div>
+</form>

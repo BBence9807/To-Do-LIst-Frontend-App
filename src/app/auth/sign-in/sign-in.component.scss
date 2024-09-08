@@ -5,17 +5,12 @@
     
     .sign-in-box{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        padding-left: 40%;
 
-        img{
-            width: 100%;
-            height: 100%;
-        }
-
-        .sign-in-title{
-            color: $base-drak-grey;
-            font-size: 30px;
+        @media screen and (max-width: 767px) {
+            padding-left: 0;
         }
     }
 }
