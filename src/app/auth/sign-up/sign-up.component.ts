@@ -1,38 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators } from '@angular/forms';
-import { NGXLogger } from 'ngx-logger';
-import { CommonFormType } from '../../shared/enum/common-form-type';
-import { CommonFormMeta } from '../../shared/interface/common-form-meta.';
 import { AuthPage } from '../interface/auth-page.';
+import { NGXLogger } from 'ngx-logger';
+import { CommonFormMeta } from '../../shared/interface/common-form-meta.';
+import { CommonFormType } from '../../shared/enum/common-form-type';
+import { Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrl: './sign-in.component.scss'
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.scss'
 })
-export class SignInComponent implements OnInit, AuthPage{
+export class SignUpComponent implements OnInit, AuthPage{
   
-  public title:string = "Sign In";
-
-  public forgotText:string = "Forgot your password?";
-
-  public forgotLink:string = "/auth/forgotPw";
-
-  public signUpQuestion:string = "Don’t have an account?";
-
-  public signUpLinkText:string = "Sign up";
-  
-  public signUpLink:string = "/auth/register";
+  public title:string = "Sign Up";
 
   public formFields:CommonFormMeta[] = [];
 
   constructor(private logger:NGXLogger){
-
+    
   }
-  
+
   ngOnInit(): void {
     this.initFormFields();
   }
+  
   initFormFields(): void {
     this.formFields = [
       {
@@ -48,12 +39,19 @@ export class SignInComponent implements OnInit, AuthPage{
         placeholder: "Enter your password...",
         type: CommonFormType.AUTH_FORM_PASSWORD,
         validators: [Validators.required]
+      },
+      {
+        label: "Password",
+        name: "userPasswordRe",
+        placeholder: "Enter your password again...",
+        type: CommonFormType.AUTH_FORM_PASSWORD,
+        validators: [Validators.required]
       }
     ]
   }
-
-  submit(value: Map<string,string>): void {
+  
+  submit(value: Map<string, string>): void {
     this.logger.info("Submit form: ",value);
   }
-  
+
 }

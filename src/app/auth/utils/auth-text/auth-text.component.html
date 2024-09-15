@@ -1,1 +1,1 @@
-<p>auth-text works!</p>
+<p [ngClass]="isLink()?'auth-text auth-text-link':'auth-text'" (click)="openLink()">{{text}}</p>

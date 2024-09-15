@@ -8,6 +8,13 @@
                 <div>
                     <app-common-form [buttonTitle]="title" [fields]="formFields" (submit)="submit($event)"></app-common-form>
                 </div>
+                <div class="sign-in-forgot-text">
+                    <app-auth-text [text]="forgotText" [link]="forgotLink"></app-auth-text>
+                </div>
+                <div class="sign-in-sign-up-text">
+                    <app-auth-text [text]="signUpQuestion"></app-auth-text>
+                    <app-auth-text [text]="signUpLinkText" [link]="signUpLink" class="sign-up-link"></app-auth-text>
+                </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">

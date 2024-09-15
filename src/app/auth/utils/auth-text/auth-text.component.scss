@@ -1,0 +1,14 @@
+@import '../../../../../assets/style/common.scss';
+
+.auth-text{
+    color: $base-drak-grey;
+    font-size: 18px;
+}
+
+.auth-text-link{
+    text-decoration: underline;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

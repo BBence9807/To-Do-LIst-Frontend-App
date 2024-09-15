@@ -1,0 +1,19 @@
+<div class="container-fluid sign-up-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="sign-up-box">
+                <div class="sign-up-title">
+                    <app-auth-title [title]="title"></app-auth-title>
+                </div>
+                <div>
+                    <app-common-form [buttonTitle]="title" [fields]="formFields" (submit)="submit($event)"></app-common-form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div>
+                <app-common-image></app-common-image>
+            </div>
+        </div>
+    </div>
+</div>

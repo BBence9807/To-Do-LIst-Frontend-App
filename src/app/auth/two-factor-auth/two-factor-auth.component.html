@@ -1,0 +1,23 @@
+<div class="container-fluid two-factor-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="two-factor-box">
+                <div class="two-factor-title">
+                    <app-auth-title [title]="title"></app-auth-title>
+                    <app-auth-text [text]="text"></app-auth-text>
+                </div>
+                <div class="two-factor-input">
+                    <p-inputOtp [(ngModel)]="value" [integerOnly]="true" [length]="inputLength" autofocus="true"/>
+                </div>
+                <div class="two-factor-submit">
+                    <app-common-button [label]="buttonLabel" [disabled]="buttonDisabled()" [autofocus]="true" (submit)="submit($event)"></app-common-button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div>
+                <app-common-image></app-common-image>
+            </div>
+        </div>
+    </div>
+</div>
